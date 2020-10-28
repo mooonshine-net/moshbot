@@ -25,14 +25,13 @@ async def on_ready():
     #open bad-words.txt
     global bad_words
     global f
-    f = open("bad-words.txt")
+    f = open("bad-words.txt", "a+")
     bad_words = [bad_word.strip().lower() for bad_word in f.readlines()]
 
 @client.event
 async def on_message(message):
-    if message.content.startswith("$"):
-        await client.process_commands(message)
-    elif any(bad_word in message.content for bad_word in bad_words):
+    print("Recived Message: {}".format(message.content))
+    if any(bad_word in message.content for bad_word in bad_words):
         repl = await message.channel.send("⚠ You cant say that here, {}!".format(message.author.mention))
         await message.delete()
         await asyncio.sleep(20)
@@ -84,6 +83,7 @@ async def addswear_error(ctx, error):
         await ctx.send("⚠ You dont have the required permissions to execute this command {}!".format(ctx.message.author.mention))
     else:
         await ctx.send("⚠ Something went wrong while executing this command {}!".format(ctx.message.author.mention))
+        print(str(error))
 
 
 @client.command()
@@ -103,5 +103,6 @@ async def delswear_error(ctx, error):
         await ctx.send("⚠ You dont have the required permissions to execute this command {}!".format(ctx.message.author.mention))
     else:
         await ctx.send("⚠ Something went wrong while executing this command {}!".format(ctx.message.author.mention))
+        print(str(error))
 
 client.run(secrets.token)
