@@ -130,7 +130,7 @@ async def help(ctx, cmd: str):
         await ctx.send(embed=embed)
 
 @help.error
-async def delswear_error(ctx, error):
+async def help_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         embed=discord.Embed(title="Help - MoshBot", url="https://github.com/AnnikenYT/moshbot", description="For more information, check out the Github Page of the bot by clicking in the title.", color=0x3300ff)
         embed.set_author(name="AnnikenYT", url="https://github.com/AnnikenYT", icon_url="https://avatars1.githubusercontent.com/u/61291253?s=60&v=4")
