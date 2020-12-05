@@ -20,11 +20,11 @@ The official Mooonshine Studio Discord Bot!
 | shutdown| Disables the Bot [after x seconds]| [seconds]|
 | addswear | add "swear" to list | "swear" |
 | delswear | remove "swear" from list | "swear" |
+| help    | Displays Help [about a Command] | [command]      |
 
 ### Commands in Work
 | Command | Function      | Arguments      |
 |:--------|---------------|:---------------|
-| help    | Displays Help [about a Command] | [command]      |
 | seen | checks when "player" was last online | "player" |
 | status | checks status off the [/a specific] server | [server]
 ### Working Functions
