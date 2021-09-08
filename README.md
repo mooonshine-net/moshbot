@@ -1,4 +1,6 @@
-﻿# Moshbot
+# This repo is currently outdated. Developement has been shifted to a Private Repo, which will be published once the current iteration is finished.
+
+# Moshbot
 ![made for](https://img.shields.io/badge/made%20for-mooonshine.net-blue?style=for-the-badge)<br/>
 ![Issues](https://img.shields.io/github/issues/AnnikenYT/moshbot?style=flat-square)
 ![Forks](https://img.shields.io/github/forks/AnnikenYT/moshbot?style=flat-square)
